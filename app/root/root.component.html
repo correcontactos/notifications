@@ -1,0 +1,34 @@
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
+
+<form #notificationForm = 'ngForm' (ngSubmit) = 'onClickSubmit(notificationForm.value)'>
+  <div class="form-group">
+    <label for="successMessage">Mensaje Info:</label>
+    <input type="text" class="form-control" id="successMessage" name="successMessage" placeholder="Info Message" ngModel>
+  </div>
+  <div class="form-group">
+    <label for="errorMessage">Mensaje Error:</label>
+    <input type="text" class="form-control" id="errorMessage" name="errorMessage" placeholder="Error Message" ngModel>
+  </div>
+  <div></div>
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio" checked class="custom-control-input" id="defaultInline3" name="library" (click) = "onClickNotification('toastr')">
+    <label class="custom-control-label" for="defaultInline3">Ver notificación con toastr</label>
+  </div>
+
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio" class="custom-control-input" id="defaultInline4" name="library" (click) = "onClickNotification('notyf')">
+    <label class="custom-control-label" for="defaultInline4">Ver notificación con notyf</label>
+  </div>
+
+  <div>
+  <button type="submit" class="btn btn-primary">Aplicar</button>
+  </div>
+  
+</form>
+
+<button class='button-info' (click)="showToaster('info')">
+  Info
+</button>
+<button class='button-error' (click)="showToaster('error')">
+  Error
+</button>

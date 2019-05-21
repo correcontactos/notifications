@@ -1,0 +1,19 @@
+.button-info{  
+    padding: 10px;
+    margin: 0px;
+    background-color: green;
+    border-radius: 100px;
+    cursor: pointer;
+    border: 0px;
+    color: white;
+}
+
+.button-error{  
+    padding: 10px;
+    margin: 0px;
+    background-color: red;
+    border-radius: 100px;
+    cursor: pointer;
+    border: 0px;
+    color: white;
+}
